@@ -1,0 +1,34 @@
+*{
+   padding:0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+html{
+   font-size: 68%;
+}
+
+.disable{
+   display:none;
+}
+
+.div-container{
+   display: flex;
+   gap: 4rem;
+   align-items: center;
+   justify-items: center;
+   justify-content: center;
+   margin-top: 15rem;
+}
+
+.div-element{
+   /* width: 3rem; */
+   /* height: 3rem; */
+   background-color: red;
+   padding: 1rem;
+   color: whitesmoke;
+   font-weight: bolder;
+   font-size: 2rem;
+   transition: ease-in-out;
+
+}
