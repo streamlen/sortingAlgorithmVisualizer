@@ -15,9 +15,13 @@ const swap = ( numArray ,j,node,i,k) =>{
    temp = numArray[j][2];
    numArray[j][2] = numArray[j+1][2];
    numArray[j+1][2] = temp;
+   // node[i].style.transform = `translateX(${numArray[j][2]}px)`;
+   // node[k].style.transform = `translateX(${-numArray[j+1][2]}px)`;
 
-   node[i].style.transform = `translateX(${numArray[j][2]}px)`;
-   node[k].style.transform = `translateX(${-numArray[j+1][2]}px)`;
+   temp = node[i].style.transform;
+   node[i].style.transform = node[k].style.transform;
+   node[k].style.transform = temp;
+
 console.log(node[i].style.transform , node[i].style.order);
    temp = node[i].style.order;
    node[i].style.order = node[k].style.order;

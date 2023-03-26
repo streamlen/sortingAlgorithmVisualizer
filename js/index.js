@@ -29,12 +29,24 @@ const randomNum = () => {
 }
 
 const showDynamicArrayDiv = (inputLength) => {
+   let j =inputLength;
+   let k =inputLength%2!=0?1:0;
+   let ans;
+   let gapLenth = 50;
    for(let i = 0; i < inputLength; i++){
       const r = randomNum()
-      const s = r ;
-      let position = 10*i;
-      divArray.push(`<div style="order: ${i};" class="div-element" id="div-element-${i}">${s}</div>`)
-      numArray.push([s,i,position]);
+      let xSize = divContainer.offsetWidth/2;
+      if(j>0){
+         ans = -(j*gapLenth);
+        j= j-2;
+      }
+      else{
+         ans = (k*gapLenth);
+         k+=2;
+      }
+      divArray.push(`<div style="order: ${i}; transform:translateX(${ans}px);" class="div-element" id="div-element-${i}">${r}</div>`)
+
+      numArray.push([r,i,ans]);
    }
    renderDiv(divArray)
 }
@@ -44,13 +56,6 @@ const renderDiv = async (divArray) => {
    for(let i = 0; i < divArray.length; i++){
       divContainer.innerHTML += divArray[i];
    }
-   // await sleep(1000);
-   // let divElement = document.querySelectorAll('.div-element');
-   // for(let i=0;i<divArray.length;i++){
-   //   let a =  divElement[i].getBoundingClientRect().top;
-   //   let b = divElement[i].getBoundingClientRect().left;
-   //    numArray[i].push(b);
-   // }
    console.log(numArray);
    bubbleSort(numArray,divContainer);
 }

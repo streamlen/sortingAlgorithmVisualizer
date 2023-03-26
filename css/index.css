@@ -13,9 +13,9 @@ html{
 }
 
 .div-container{
-   width: min-content;
+   /* width: min-content; */
    display: flex;
-   gap: 5rem;
+   /* gap: 5rem; */
    align-items: center;
    justify-items: center;
    justify-content: center;
@@ -25,7 +25,7 @@ html{
 
 .div-element{
    width: 5rem;
-   /* position:absolute; */
+   position:absolute;
    /* height: 3rem; */
    text-align: center;
    background-color: red;
