@@ -13,22 +13,26 @@ html{
 }
 
 .div-container{
+   /* width: min-content; */
    display: flex;
-   gap: 4rem;
+   /* gap: 5rem; */
    align-items: center;
    justify-items: center;
    justify-content: center;
    margin-top: 15rem;
+   justify-content: center;
 }
 
 .div-element{
-   /* width: 3rem; */
+   width: 5rem;
+   position:absolute;
    /* height: 3rem; */
+   text-align: center;
    background-color: red;
    padding: 1rem;
    color: whitesmoke;
    font-weight: bolder;
    font-size: 2rem;
-   transition: ease-in-out;
+   transition: 0.5s ease-in-out;
 
 }
