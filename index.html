@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <title>Sorting Visualizer</title>
-  </head>
-  <body>
-    <!-- here all functionality will be mentioned -->
-    <nav></nav>
-
-    <section class="sorting_general-container">
-      <div class="input_area-container">
-        <div class="button_len_random">
-          <button class="btn btn_rand">RANDOM INPUT</button>
-          <input
-            type="number"
-            name="length"
-            id="length"
-            class="disable rand_input"
-          />
-          <button class="btn btn_submit disable">Submit</button>
-        </div>
-        <div class="button_len_manual">
-          <button class="btn btn_man">MANUAL INPUT</button>
-          <input
-            type="text"
-            name="array"
-            id="array"
-            class="disable man_input"
-          />
-          <button class="btn btn_man_submit disable">Submit</button>
-        </div>
-      </div>
-      <div class="sorting_Algos">
-        <button class="btn btn_bubbleSort">Bubble Sort</button>
-        <button class="btn btn_insertionSort">Insertion Sort</button>
-        <button class="btn btn_selectionSort">Selection Sort</button>
-      </div>
-      <div class="speed_of_Sort">
-         <div class="select_type">
-            <select name="Shape" id="elemType">
-               <option value="volvo">Round</option>
-               <option value="saab">Bar</option>
-             </select>
-         </div>
-        <label class="speed_of_Sort-label" for="range">Speed</label>
-        <input
-          type="range"
-          name="range"
-          min="-1.5"
-          max="1.5"
-          value="0"
-          step="0.5"
-          class="slider"
-          id="myRange"
-        />
-      </div>
-    </section>
-
-    <!-- here actual visualtion process will be carried -->
-    <section class="div-container-bar"></section>
-    <!-- <script src="./js/bubbleSort.js"></script> -->
-    <script src="./js/utils.js"></script>
-    <script src="./js/bubbleSortFlex.js"></script>
-    <script src="./js/index.js"></script>
-    <script src="./js/selectionSort.js"></script>
-    <script src="./js/insertionSort.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/home.css" />
+		<link rel="stylesheet" href="./css/nav.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<nav class="nav-container">
+			<!-- <h3>Streamlen</h3>
+			<a href="">Github</a> -->
+		</nav>
+		<main>
+			<h2>
+				👋 Hey there, We're excited to share our project - an algorithm
+				visualizer! 🎉 Whether you're a computer science student or a curious
+				tech enthusiast, this tool is perfect for anyone who wants to learn more
+				about how algorithms work. With our visualizer, you can watch in
+				real-time as sorting algorithms like Bubble Sort and Quick Sort
+				rearrange elements in an array 📊 or as searching algorithms like Binary
+				Search and Linear Search find elements in a sorted list 🔍 But that's
+				not all! 🤩 You can also customize the size of the array and the speed
+				of the algorithm, and even visualize multiple algorithms at once to
+				compare their performance. Plus, with a sleek and user-friendly
+				interface, you'll have a blast experimenting and learning with our
+				algorithm visualizer. So what are you waiting for? Give it a spin and
+				see for yourself how cool algorithms can be! 🤓💻
+			</h2>
+			<section class="section-container">
+				<div class="sorting">
+					<div class="sort-head">Sorting</div>
+					<hr />
+					<a href="./sorting.html" class="li-items">Bubble Sort</a>
+					<a class="li-items">Insertion Sort</a>
+					<a class="li-items">Selection Sort</a>
+					<a title="coming soon" class="li-items deactive">Count Sort</a>
+					<a title="coming soon" class="li-items deactive">Radix Sort</a>
+					<a title="coming soon" class="li-items deactive">Merge Sort</a>
+					<a title="coming soon" class="li-items deactive">Quick Sort</a>
+				</div>
+				<div class="searching">
+					<div class="search-head">Searching</div>
+					<hr />
+					<a title="coming soon" class="li-items deactive">Linear Search</a>
+					<a title="coming soon" class="li-items deactive">Binary Search</a>
+				</div>
+			</section>
+		</main>
+		<script src="./js/nav.js"></script>
+	</body>
 </html>
