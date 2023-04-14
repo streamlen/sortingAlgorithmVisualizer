@@ -8,19 +8,82 @@ html{
    font-size: 68%;
 }
 
+body{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: rgb(85, 85, 85);
+   align-items: center;
+}
+
 .disable{
    display:none;
+}
+
+.sorting_general-container{
+   display: flex;
+   padding: 2rem;
+   gap:2rem;
+   flex-direction: column;
+   align-items: center;
+   background-color: rgb(197, 255, 255);
+   border: 0.2rem solid rgb(118, 255, 255);
+   border-radius: 1rem;
+   justify-content: center;
+}
+
+.input_area-container{
+   display: flex;
+   gap:2rem;
+}
+
+.btn{
+   background-color: rgb(254, 237, 217);
+   border:2px solid rgb(251, 215, 173);
+   padding:2rem;
+   cursor:pointer;
+   border-radius:50%;
+   font-size: 1.5rem;
+
+}
+
+.sorting_Algos{
+   display: flex;
+   flex-direction: row;
+   gap:2rem;
+}
+
+.speed_of_Sort{
+   display: flex;
+   gap:1rem;
+}
+.speed_of_Sort label{
+   font-size: 20px;
+}
+
+.speed_of_Sort input{
+   width:20rem;
 }
 
 .div-container{
    /* width: min-content; */
    display: flex;
    /* gap: 5rem; */
-   align-items: center;
-   justify-items: center;
+   /* align-items: center; */
+   /* justify-items: center; */
    justify-content: center;
-   margin-top: 15rem;
+   margin-top: 10%;
+   /* transform: translateX(50%); */
+   /* justify-content: center; */
+}
+
+.div-container-bar{
+   display: flex;
+   /* gap: 5rem; */
+   align-items: flex-end;
+   /* justify-items: center; */
    justify-content: center;
+   margin-top: 10%;
 }
 
 .div-element{
@@ -28,11 +91,53 @@ html{
    position:absolute;
    /* height: 3rem; */
    text-align: center;
-   background-color: red;
-   padding: 1rem;
-   color: whitesmoke;
+   background-color: rgb(166, 218, 216);
+   padding: 1.5rem;
+   color: rgb(110, 110, 110);
+   border-radius: 50%;
    font-weight: bolder;
    font-size: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
    transition: 0.5s ease-in-out;
-
 }
+
+.div-element-bar{
+   width: 5rem;
+   position:absolute;
+   /* height: 3rem; */
+   text-align: center;
+   background-color: rgb(166, 218, 216);
+   padding: 1.5rem;
+   color: rgb(110, 110, 110);
+   border-radius: 1rem;
+   font-weight: bolder;
+   font-size: 2rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-end;
+   transition: 0.5s ease-in-out;
+}
+
+.select_type{
+   display:flex;
+}
+.select_type select{
+   width: 10rem;
+   padding:0.5rem;
+    text-align: center;
+    background-color: rgb(254, 237, 217);
+    border:2px solid rgb(255, 220, 180);
+    border-radius: 3rem;
+    font-size: 16px;
+}
+
+.input_area-container,.sorting_Algos,.speed_of_Sort{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+

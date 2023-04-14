@@ -1,74 +1,62 @@
-// const bubbleSort = (numArray, divContainer) => {
-//    let i, j;
-//    let l = 0, k = 0;
-
-//    const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-//    const setColorPromise = (element, color) => new Promise(resolve => {
-//      setColor(element, color);
-//      resolve();
-//    });
-
-//    const loop = () => {
-//      i = 0;
-//      return loopI();
-//    }
-
-//    const loopI = () => {
-//      if (i >= numArray.length - 1) {
-//        return finalize();
-//      }
-
-//      j = 0;
-//      return loopJ();
-//    }
-
-//    const loopJ = () => {
-//      if (j >= numArray.length - 1 - i) {
-//        return loopI();
-//      }
-
-//      l = 0;
-//      k = 0;
-//      while (divContainer.childNodes[l].style.order != numArray[j][1]) l++;
-//      while (divContainer.childNodes[k].style.order != numArray[j + 1][1]) k++;
-
-//      return sleep(1000)
-//        .then(() => setColorPromise(divContainer.childNodes[l], "blue"))
-//        .then(() => setColorPromise(divContainer.childNodes[k], "blue"))
-//        .then(() => sleep(1000))
-//        .then(() => {
-//          if (numArray[j][0] > numArray[j + 1][0]) {
-//             swap(numArray, j, divContainer.childNodes, l, k)
-//             sleep(1000)
-//              .then(() => setColorPromise(divContainer.childNodes[l], "red"))
-//              .then(() => setColorPromise(divContainer.childNodes[k], "red"));
-//          }
-//        })
-//        .then(() => setColorPromise(divContainer.childNodes[l], "red"))
-//        .then(() => setColorPromise(divContainer.childNodes[k], "red"))
-//        .then(() => {
-//          j++;
-//          return loopJ();
-//        });
-//    }
-
-//    const finalize = () => {
-//       sleep(1000)
-//        .then(() => {
-//          for (let m = 0; m < numArray.length; m++) {
-//            if (divContainer.childNodes[m].innerHTML == numArray[j][0]) {
-//              setColorPromise(divContainer.childNodes[m], "green");
-//            }
-//          }
-//        })
-//        .then(() => {
-//          for (let m = 0; m < numArray.length; m++) {
-//            if (divContainer.childNodes[m].style.backgroundColor != "green") {
-//              setColorPromise(divContainer.childNodes[m], "green");
-//            }
-//          }
-//        });
-//    }
-
-//    return loop();
-//  };
+const selectionSort = async(numArray,divContainer) =>{
+   slider.addEventListener('input',(event)=>{
+      speed = event.target.value;
+      if(speed<0){
+         speed = Math.abs(speed*500)+1000;
+      }
+      else{
+         speed = Math.abs(-(speed*500)+1000);
+      }
+      console.log(speed);
+   });
+//   slider.value = 0;
+//   speed = 1000;
+   let i,j,l=0,k=0,min_idx;
+   for (i = 0; i < numArray.length-1; i++){
+      min_idx = i;
+      for (j = i+1; j < numArray.length; j++){
+         l=0;
+         k=0;
+         console.log(numArray);
+         while(divContainer.childNodes[l].style.order!=numArray[j][1])   l++;
+         while(divContainer.childNodes[k].style.order!=numArray[min_idx][1])   k++;
+         await sleep(speed)
+         setColor(divContainer.childNodes[l],"rgb(251, 215, 173)")
+         setColor(divContainer.childNodes[k],"rgb(251, 215, 173)")
+         await sleep(speed)
+         if (numArray[j][0] < numArray[min_idx][0]){
+            min_idx = j;
+            await sleep(speed)
+            setColor(divContainer.childNodes[l],"rgb(166, 218, 216)")
+            setColor(divContainer.childNodes[k],"rgb(166, 218, 216)")
+         }
+         setColor(divContainer.childNodes[l],"rgb(166, 218, 216)")
+         setColor(divContainer.childNodes[k],"rgb(166, 218, 216)")
+      }
+      l=0,k=0;
+      while(divContainer.childNodes[l].style.order!=numArray[i][1])   l++;
+      while(divContainer.childNodes[k].style.order!=numArray[min_idx][1])   k++;
+      if (min_idx!=i){
+         swap(numArray,i,min_idx,divContainer.childNodes,l,k);
+         await sleep(speed);
+         console.log("hi buddy");
+         for(let m = 0 ;m< numArray.length;m++){
+            if(divContainer.childNodes[m].innerHTML == numArray[i][0]){
+               setColor(divContainer.childNodes[m],"#9eff9e");
+            }
+         }
+      }
+      await sleep(speed);
+      for(let m = 0 ;m< numArray.length;m++){
+         if(divContainer.childNodes[m].innerHTML == numArray[i][0]){
+            setColor(divContainer.childNodes[m],"#9eff9e");
+         }
+      }
+   }
+   await sleep(1000);
+   for(let m = 0 ;m< numArray.length;m++){
+      if(divContainer.childNodes[m].style.backgroundColor != "#9eff9e"){
+         setColor(divContainer.childNodes[m],"#9eff9e")
+      }
+   }
+}
