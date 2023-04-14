@@ -9,11 +9,10 @@ html{
 }
 
 body{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   font-family: "Poppins", sans-serif;
+	font-weight: 400;
    background-color: rgb(85, 85, 85);
-   align-items: center;
+   text-align:-webkit-center;
 }
 
 .disable{
@@ -24,6 +23,7 @@ body{
    display: flex;
    padding: 2rem;
    gap:2rem;
+   width: 50%;
    flex-direction: column;
    align-items: center;
    background-color: rgb(197, 255, 255);
