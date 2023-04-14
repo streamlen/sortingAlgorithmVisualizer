@@ -1,29 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/index.css">
-   <title>Sorting Visualizer</title>
-</head>
-<body>
-   <!-- here all functionality will be mentioned -->
-   <section>
-      <div class="button_len_random">
-         <button class="btn btn_rand">RANDOM</button>
-         <input type="number" name="length" id="length" class="disable rand_input" >
-         <button class="btn btn_submit disable">Submit</button>
-      </div>
-   </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Sorting Visualizer</title>
+  </head>
+  <body>
+    <!-- here all functionality will be mentioned -->
+    <nav></nav>
 
-   <!-- here actual visualtion process will be carried -->
-   <section class="div-container"></section>
-   <!-- <script src="./js/bubbleSort.js"></script> -->
-   <script src="./js/utils.js"></script>
-   <script src="./js/bubbleSortFlex.js"></script>
-   <script src="./js/index.js"></script>
-   <script src="./js/selectionSort.js"></script>
-   <script src="./js/insertionSort.js"></script>
-</body>
+    <section class="sorting_general-container">
+      <div class="input_area-container">
+        <div class="button_len_random">
+          <button class="btn btn_rand">RANDOM INPUT</button>
+          <input
+            type="number"
+            name="length"
+            id="length"
+            class="disable rand_input"
+          />
+          <button class="btn btn_submit disable">Submit</button>
+        </div>
+        <div class="button_len_manual">
+          <button class="btn btn_man">MANUAL INPUT</button>
+          <input
+            type="text"
+            name="array"
+            id="array"
+            class="disable man_input"
+          />
+          <button class="btn btn_man_submit disable">Submit</button>
+        </div>
+      </div>
+      <div class="sorting_Algos">
+        <button class="btn btn_bubbleSort">Bubble Sort</button>
+        <button class="btn btn_insertionSort">Insertion Sort</button>
+        <button class="btn btn_selectionSort">Selection Sort</button>
+      </div>
+      <div class="speed_of_Sort">
+         <div class="select_type">
+            <select name="Shape" id="elemType">
+               <option value="volvo">Round</option>
+               <option value="saab">Bar</option>
+             </select>
+         </div>
+        <label class="speed_of_Sort-label" for="range">Speed</label>
+        <input
+          type="range"
+          name="range"
+          min="-1.5"
+          max="1.5"
+          value="0"
+          step="0.5"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+    </section>
+
+    <!-- here actual visualtion process will be carried -->
+    <section class="div-container-bar"></section>
+    <!-- <script src="./js/bubbleSort.js"></script> -->
+    <script src="./js/utils.js"></script>
+    <script src="./js/bubbleSortFlex.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/selectionSort.js"></script>
+    <script src="./js/insertionSort.js"></script>
+  </body>
 </html>
