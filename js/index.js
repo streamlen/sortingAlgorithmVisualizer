@@ -7,6 +7,7 @@ const manInput = document.querySelector('.man_input');
 const divContainer = document.querySelector('.div-container')
 const typeElem = document.querySelector('#elemType');
 const displayContainer = document.querySelector('#display-container');
+const displaySubtitle = document.querySelector('.actual-container');
 let elemType = 'Round';
 let divArray = [];
 let manArray;
@@ -82,6 +83,7 @@ const showDynamicArrayDiv = (inputLength,allow) => {
 }
 
 const renderDiv = async (divArray) => {
+   displaySubtitle.innerHTML =" ";
    for(let i = 0; i < divArray.length; i++){
       divContainer.innerHTML += divArray[i];
    }
