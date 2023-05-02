@@ -41,14 +41,14 @@ const selectionSort = async(numArray,divContainer) =>{
          await sleep(speed);
          console.log("hi buddy");
          for(let m = 0 ;m< numArray.length;m++){
-            if(divContainer.childNodes[m].innerHTML == numArray[i][0]){
+            if(divContainer.childNodes[m].innerHTML == numArray[i][0] && divContainer.childNodes[m].style.order==numArray[i][1]){
                setColor(divContainer.childNodes[m],"#9eff9e");
             }
          }
       }
       await sleep(speed);
       for(let m = 0 ;m< numArray.length;m++){
-         if(divContainer.childNodes[m].innerHTML == numArray[i][0]){
+         if(divContainer.childNodes[m].innerHTML == numArray[i][0] && divContainer.childNodes[m].style.order==numArray[i][1]){
             setColor(divContainer.childNodes[m],"#9eff9e");
          }
       }

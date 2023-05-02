@@ -34,7 +34,7 @@ const insertionSort = async (numArray,divContainer)=>{
       }
       for(let m = i ;m>=0;m--){
          for(let n = 0 ;n< numArray.length;n++){
-            if(divContainer.childNodes[n].innerHTML == numArray[m][0]){
+            if(divContainer.childNodes[n].innerHTML == numArray[m][0] && divContainer.childNodes[n].style.order==numArray[m][1]){
                await sleep(speed);
                setColor(divContainer.childNodes[n],"#9eff9e");
                break;

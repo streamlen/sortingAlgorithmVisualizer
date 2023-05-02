@@ -18,6 +18,15 @@
     <!-- here all functionality will be mentioned -->
     <nav class="nav-container"></nav>
 
+   <!-- here actual visualtion process will be carried -->
+   <section class="div-container" id="display-container"></section>
+
+   <!-- here we are displaying subtitles -->
+   <section class="display-container-subtitle">
+      <div class="actual-container"></div>
+   </section>
+
+ <!-- here all methods and process will be mentioned -->
     <section class="sorting_general-container">
       <div class="input_area-container">
         <div class="button_len_random">
@@ -45,10 +54,14 @@
         <button class="btn btn_bubbleSort">Bubble Sort</button>
         <button class="btn btn_insertionSort">Insertion Sort</button>
         <button class="btn btn_selectionSort">Selection Sort</button>
+        <button class="btn btn_selectionSort" disabled>Merge Sort</button>
+        <button class="btn btn_selectionSort" disabled>Quick Sort</button>
+        <button class="btn btn_selectionSort" disabled>Heap Sort</button>
+        <button class="btn btn_selectionSort" disabled>Count Sort</button>
       </div>
       <div class="speed_of_Sort">
          <div class="select_type">
-            <select name="Shape" id="elemType">
+            <select name="Shape" id="elemType" disabled>
                <option value="Round">Round</option>
                <option value="Bar">Bar</option>
              </select>
@@ -67,8 +80,6 @@
       </div>
     </section>
 
-    <!-- here actual visualtion process will be carried -->
-    <section class="div-container" id="display-container"></section>
     <!-- <script src="./js/bubbleSort.js"></script> -->
     <script src="./js/utils.js"></script>
     <script src="./js/nav.js"></script>
