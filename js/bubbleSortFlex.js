@@ -31,14 +31,14 @@ const bubbleSort =  async (numArray,divContainer) =>{
          setColor(divContainer.childNodes[l],"rgb(251, 215, 173)")
          setColor(divContainer.childNodes[k],"rgb(251, 215, 173)")
          await sleep(speed)
-         displaySubtitle.innerHTML += divElem;
-         await sleep(speed);
+         // displaySubtitle.innerHTML += divElem;
+         // await sleep(speed);
          if(numArray[j][0] > numArray[j+1][0]){
          //    divElem = `<div class="subtitle-content">
          //    Swapping ${numArray[j][0]} with ${numArray[j+1][0]}
          // </div>`
          //    displaySubtitle.innerHTML += divElem;
-            await sleep(speed);
+            // await sleep(speed);
             swap( numArray ,j,j+1,divContainer.childNodes,l,k);
             await sleep(speed)
             setColor(divContainer.childNodes[l],"rgb(166, 218, 216)")
@@ -64,6 +64,6 @@ const bubbleSort =  async (numArray,divContainer) =>{
    //       Sorting completed .
    // </div>`
    // displaySubtitle.innerHTML += divElem;
-   await sleep(speed);
+   // await sleep(speed);
 }
 
