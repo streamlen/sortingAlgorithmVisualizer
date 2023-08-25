@@ -34,7 +34,7 @@ main h2 {
 }
 
 .sorting,
-.searching {
+.searching,.tree {
 	background-color: bisque;
 	border-radius: 1rem;
 	padding: 1rem 1rem;
@@ -44,7 +44,7 @@ main h2 {
 }
 
 .sort-head,
-.search-head {
+.search-head,.tree-head {
 	font-size: 3rem;
 	color: brown;
 	font-weight: 600;
