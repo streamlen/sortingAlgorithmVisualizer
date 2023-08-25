@@ -44,6 +44,16 @@ document.querySelector('.btn_selectionSort').addEventListener('click',()=>{
    selectionSort(numArray,divContainer);
 })
 
+document.querySelector('.btn_countingSort').addEventListener('click',()=>{
+   divContainer.innerHTML = "";
+   array_visualization_count.innerHTML="";
+   divArray=[];
+   let length = numArray.length;
+   numArray = [];
+   showDynamicArrayDiv(length,allow,'countingSort');
+   countingSort(numArray,divContainer);
+})
+
 let slider= document.querySelector('.slider');
 let speed = 1000 ;
 

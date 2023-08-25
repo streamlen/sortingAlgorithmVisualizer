@@ -7,26 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-    <link rel="stylesheet" href="./css/index.css"/>
-    <link rel="stylesheet" href="./css/nav.css"/>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto+Mono:wght@300;400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
     <title>Sorting Visualizer</title>
   </head>
   <body>
     <!-- here all functionality will be mentioned -->
     <nav class="nav-container"></nav>
 
-   <!-- here actual visualtion process will be carried -->
-   <section class="div-container" id="display-container"></section>
+    <!-- here actual visualtion process will be carried -->
+    <div class="multi-visualizer-wrapper">
+      <section class="div-container" id="display-container"></section>
+      <section class="array-visualization" id="display-container-2"></section>
+      <section class="array-visualization-count"></section>
+    </div>
 
-   <!-- here we are displaying subtitles -->
-   <section class="display-container-subtitle">
+    <!-- here we are displaying subtitles -->
+    <section class="display-container-subtitle">
       <div class="actual-container"></div>
-   </section>
+    </section>
 
- <!-- here all methods and process will be mentioned -->
+    <!-- here all methods and process will be mentioned -->
     <section class="sorting_general-container">
       <div class="input_area-container">
         <div class="button_len_random">
@@ -57,15 +61,15 @@
         <button class="btn btn_selectionSort" disabled>Merge Sort</button>
         <button class="btn btn_selectionSort" disabled>Quick Sort</button>
         <button class="btn btn_selectionSort" disabled>Heap Sort</button>
-        <button class="btn btn_selectionSort" disabled>Count Sort</button>
+        <button class="btn btn_countingSort">Count Sort</button>
       </div>
       <div class="speed_of_Sort">
-         <div class="select_type">
-            <select name="Shape" id="elemType" disabled>
-               <option value="Round">Round</option>
-               <option value="Bar">Bar</option>
-             </select>
-         </div>
+        <div class="select_type">
+          <select name="Shape" id="elemType" disabled>
+            <option value="Round">Round</option>
+            <option value="Bar">Bar</option>
+          </select>
+        </div>
         <label class="speed_of_Sort-label" for="range">Speed</label>
         <input
           type="range"
@@ -81,12 +85,12 @@
     </section>
 
     <!-- <script src="./js/bubbleSort.js"></script> -->
-    <script src="./js/utils.js"></script>
-    <script src="./js/nav.js"></script>
-    <script src="./js/bubbleSortFlex.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="./js/bubbleSortFlex.js"></script>
     <script src="./js/selectionSort.js"></script>
     <script src="./js/insertionSort.js"></script>
+    <script src="./js/countingSort.js"></script>
   </body>
 </html>
-

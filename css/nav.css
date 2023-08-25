@@ -5,6 +5,8 @@
 	background-color: rgb(48, 48, 48);
   justify-content: space-between;
   padding: 1rem 5rem;
+  /* height:50px; */
+  margin-bottom:1rem;
 }
 
 .nav-container h3 {
